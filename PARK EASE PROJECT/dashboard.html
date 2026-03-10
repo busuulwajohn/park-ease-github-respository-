@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta charset="UTF-8"> -->
+    <title>ParkEase | Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="profile-icon-container">
+            <img id="sidebarProfilePic" src="https://via.placeholder.com/80" alt="Profile">
+        </div>
+
+        <h2>ParkEase</h2>
+
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="parking.html">Parking</a></li>
+            <li><a href="charging.html">Charging</a></li>
+            <li><a href="washing.html">Car Washing</a></li>
+            <li><a href="booking.html">Book Service</a></li>
+            <li><a href="payments.html">Payment Activity</a></li>
+            <li onclick="logout()">Logout</li>
+        </ul>
+    </aside>
+
+    <!-- Main Wrapper -->
+    <div class="main-wrapper">
+
+        <header class="topbar">
+            <button id="menuToggle">☰</button>
+            <h1 id="welcomeMessage"></h1>
+        </header>
+
+        <!-- USER INFO SECTION (ADDED HERE CLEANLY) -->
+        <section class="analytics-grid">
+            <div class="analytics-card">
+                <h3>USERNAME</h3>
+                <p id="userName"></p>
+            </div>
+
+            <div class="analytics-card">
+                <h3>SIGN IN E-MAIL</h3>
+                <p id="userEmail"></p>
+            </div>
+
+            <div class="analytics-card">
+                <h3>TEAM MEMBERSHIP ID</h3>
+                <p id="userPlate"></p>
+            </div>
+
+            <div class="analytics-card">
+                <h3>UG TIME STATUS/ UPDATED</h3>
+                <p id="nycClock"></p>
+            </div>
+        </section>
+
+        <!-- ORIGINAL SMALL CARDS -->
+        <section class="cards">
+            <div class="card">Available Slots: 24</div>
+            <div class="card">Active Bookings: 2</div>
+            <div class="card">Total Spent: $120</div>
+        </section>
+
+        <!-- BOOKING -->
+        <!-- <section class="booking">
+            <h2>Book Parking Slot</h2>
+            <form id="bookingForm">
+                <input type="number" id="hours" placeholder="Enter Parking Hours" required>
+                <button type="submit">Calculate & Book</button>
+            </form>
+            <p id="bookingResult"></p>
+        </section> -->
+
+        <main class="main-content">
+
+            <!-- ===== SYSTEM OVERVIEW CARDS ===== -->
+            <section class="analytics-grid">
+
+                <div class="analytics-card">
+                    <h3>TOTAL AMOUNT CHARGED</h3>
+                    <p id="totalRevenue">shs0</p>
+                </div>
+
+                <div class="analytics-card">
+                    <h3>TOTAL TRASACTIONS MADE</h3>
+                    <p id="totalTransactions">0</p>
+                </div>
+
+                <div class="analytics-card">
+                    <h3>TODAY TOTAL SERVICES</h3>
+                    <p id="activeServices">0</p>
+                </div>
+
+                <div class="analytics-card">
+                    <h3>CURRENT SYSTEM STATUS</h3>
+                    <p id="nycStatus">IDLE</p>
+                </div>
+
+            </section>
+
+            <!-- SERVICE BREAKDOWN + CLOCK -->
+            <!-- <section class="analytics-large">
+
+                <div class="service-breakdown">
+                    <h3>Service Usage Breakdown</h3>
+                    <ul id="serviceBreakdown"></ul>
+                </div>
+
+                <div class="live-clock">
+                    <h3>UG TIME STATUS/ UPDATED</h3>
+                    <p id="nycClock"></p>
+                </div>
+
+            </section> -->
+
+            <!-- SMART NOTIFICATIONS -->
+            <!-- <section class="notifications-panel">
+                <h3>System Notifications</h3>
+                <ul id="notificationList"></ul>
+            </section> -->
+
+        </main>
+    </div>
+</div>
+
+<!-- PROFILE MODAL -->
+<div class="profile-modal" id="profileModal">
+    <div class="profile-modal-content">
+
+        <span class="close-btn" id="closeProfile">&times;</span>
+
+        <h2>PROFILE INFO</h2>
+
+        <div class="profile-picture-section">
+            <img id="profilePreview" src="https://via.placeholder.com/120">
+            <input type="file" id="profileUpload" accept="image/*">
+        </div>
+
+        <div class="profile-details">
+            <input type="text" id="editName" placeholder="Full Name">
+            <input type="email" id="editEmail" placeholder="Email">
+            <input type="text" id="editPhone" placeholder="Phone">
+            <input type="text" id="editVehicle" placeholder="Membership ID">
+            <button id="saveProfile">Save Changes</button>
+        </div>
+
+    </div>
+</div>
+
+<script src="auth.js"></script>
+<script src="core.js"></script>
+<script src="dashboard.js"></script>
+
+</body>
+</html>

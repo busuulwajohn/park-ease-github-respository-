@@ -1,0 +1,40 @@
+.payment-table {
+    width: 90%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.payment-table th,
+.payment-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.payment-table th {
+    background: #00c6ff;
+    color: white;
+}
+ /* still in observation code above */
+/* loook down */
+ /* .payment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    color: white;
+}
+
+.payment-table th {
+    background: rgba(0,198,255,0.2);
+    color: #00c6ff;
+    padding: 12px;
+}
+
+.payment-table td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+} */
+
+.payment-table tr:hover {
+    background: rgba(0,198,255,0.05);
+}

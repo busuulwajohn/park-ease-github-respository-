@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ParkEase | Charging Service</title>
+
+<link rel="stylesheet" href="charging.css">
+
+</head>
+
+<body>
+
+<div class="page">
+
+<h1 class="title">⚡ ParkEase EV Charging Services</h1>
+
+<div class="charging-container">
+
+<div class="station-card">
+<h2>⚡ Station A</h2>
+<p>Fast Charging</p>
+<p>Power: 150kW</p>
+<p>Fee: UGX 75,000</p>
+<button onclick="selectStation('A')">Start Charging</button>
+</div>
+
+<div class="station-card">
+<h2>🔋 Station B</h2>
+<p>Standard Charging</p>
+<p>Power: 75kW</p>
+<p>Fee: UGX 50,000</p>
+<button onclick="selectStation('B')">Start Charging</button>
+</div>
+
+<div class="station-card">
+<h2>🚀 Station C</h2>
+<p>Ultra Charging</p>
+<p>Power: 300kW</p>
+<p>Fee: UGX 120,000</p>
+<button onclick="selectStation('C')">Start Charging</button>
+</div>
+
+</div>
+
+<!-- PAYMENT MODAL -->
+
+<!-- <div class="modal-overlay" id="paymentModal">
+
+<div class="payment-box">
+
+<h2>💳 Confirm Charging Payment</h2>
+
+<p>Membership ID: <span id="membershipId"></span></p>
+<p>Vehicle Plate: <span id="vehiclePlate"></span></p>
+<p>Station: <span id="stationId"></span></p>
+<p>Energy: <span id="chargingEnergy"></span></p>
+<p>Amount: <span id="chargingFee"></span></p>
+
+<div class="modal-buttons">
+<button onclick="confirmPayment()">Pay Now</button>
+<button onclick="cancelPayment()">Cancel</button>
+</div>
+
+</div>
+
+</div> -->
+
+<!-- CONFIRMATION MODAL -->
+
+<!-- <div class="modal-overlay" id="confirmationModal">
+
+<div class="confirmation-box">
+
+<h2>✅ Payment Successful</h2>
+
+<p>Transaction ID:</p>
+<h3 id="transactionId"></h3>
+
+<p>Your EV charging session has started.</p>
+
+<button onclick="closeConfirmation()">Close</button>
+
+</div>
+
+</div> -->
+
+<!-- PAYMENT MODAL -->
+<div class="modal-overlay" id="paymentModal">
+
+<div class="payment-box">
+
+<h2>💳 Confirm Charging Payment</h2>
+
+<p>Membership ID: <span id="membershipId"></span></p>
+<p>Vehicle Plate: <span id="vehiclePlate"></span></p>
+<p>Station: <span id="stationId"></span></p>
+<p>Energy: <span id="chargingEnergy"></span></p>
+<p>Amount: <span id="chargingFee"></span></p>
+
+<div class="modal-buttons">
+<button onclick="confirmPayment()">Pay Now</button>
+<button onclick="cancelPayment()">Cancel</button>
+</div>
+
+</div>
+</div>
+
+<!-- CONFIRMATION MODAL -->
+<div class="modal-overlay" id="confirmationModal">
+
+<div class="confirmation-box">
+
+<h2>✅ Payment Successful</h2>
+
+<p>Transaction ID:</p>
+<h3 id="transactionId"></h3>
+
+<p>Your EV charging session has started.</p>
+
+<button onclick="closeConfirmation()">Close</button>
+
+</div>
+</div>
+<!-- CHARGING STATUS -->
+
+<div class="charging-status">
+
+<h2>🔌 Charging Status</h2>
+
+<p>Status: <span id="chargingStatus">Idle</span></p>
+
+<div class="progress-bar">
+<div id="chargeProgress"></div>
+</div>
+
+</div>
+
+</div>
+
+<script src="auth.js"></script>
+<script src="charging.js"></script>
+
+</body>
+</html>

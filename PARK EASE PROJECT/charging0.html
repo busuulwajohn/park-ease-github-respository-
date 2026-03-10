@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ParkEase | Charging Service</title>
+
+<link rel="stylesheet" href="charging.css">
+
+</head>
+
+<body>
+
+<div class="page">
+
+<h1 class="title">⚡ EV Charging Services</h1>
+
+<div class="charging-container">
+
+<div class="station-card">
+<h2>Station A</h2>
+<p>Fast Charging</p>
+<p>Power: 150kW</p>
+<p>Fee: $20</p>
+<button onclick="selectStation('A')">Select</button>
+</div>
+
+<div class="station-card">
+<h2>Station B</h2>
+<p>Standard Charging</p>
+<p>Power: 75kW</p>
+<p>Fee: $15</p>
+<button onclick="selectStation('B')">Select</button>
+</div>
+
+<div class="station-card">
+<h2>Station C</h2>
+<p>Ultra Charging</p>
+<p>Power: 300kW</p>
+<p>Fee: $30</p>
+<button onclick="selectStation('C')">Select</button>
+</div>
+
+</div>
+
+<!-- PAYMENT POPUP -->
+
+<div class="modal-overlay" id="paymentModal">
+
+<div class="payment-box">
+
+<h2>Confirm Charging Payment</h2>
+
+<p>Membership ID: <span id="membershipId"></span></p>
+<p>Vehicle Plate: <span id="vehiclePlate"></span></p>
+<p>Station: <span id="stationId"></span></p>
+<p>Energy: <span id="chargingEnergy"></span></p>
+<p>Amount: <span id="chargingFee"></span></p>
+
+<div class="modal-buttons">
+<button onclick="confirmPayment()">Confirm Payment</button>
+<button onclick="cancelPayment()">Cancel</button>
+</div>
+
+</div>
+
+</div>
+
+<!-- TRANSACTION CONFIRMATION -->
+
+<!-- <div class="confirmation-box" id="confirmationBox">
+
+<h2>Payment Successful ✅</h2>
+
+<p>Transaction ID:</p>
+<h3 id="transactionId"></h3>
+
+<p>Your EV charging session has started.</p>
+
+<button onclick="document.getElementById('confirmationBox').style.display='none'">
+Close
+</button>
+
+</div> -->
+
+<!-- wtch out -->
+ <div class="modal-overlay" id="confirmationModal">
+
+<div class="confirmation-box">
+
+<h2>Payment Successful ✅</h2>
+
+<p>Transaction ID</p>
+<h3 id="transactionId"></h3>
+
+<p>Your EV charging session has started.</p>
+
+<button onclick="closeConfirmation()">Close</button>
+
+</div>
+
+</div>
+
+<!-- ACTIVE CHARGING -->
+
+<div class="charging-status">
+
+<h2>Charging Status</h2>
+
+<p>Status: <span id="chargingStatus">Idle</span></p>
+
+<div class="progress-bar">
+<div id="chargeProgress"></div>
+</div>
+
+</div>
+
+</div>
+
+<script src="auth.js"></script>
+<!-- <script src="services.js"></script> -->
+<script src="charging.js"></script>
+
+</body>
+</html>

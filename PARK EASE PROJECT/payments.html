@@ -1,0 +1,62 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<title>Parking Service</title>
+<link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<h2>Payments Activity</h2>
+
+<table border="1" width="100%">
+    <thead>
+        <tr>
+            <th>Transaction ID</th>
+            <th>Service</th>
+            <th>Amount</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody id="paymentTable"></tbody>
+</table>
+
+<script src="js/payments.js"></script> -->
+
+<!-- still in  observation codes above -->
+ 
+<!DOCTYPE html>
+<html>
+<head>
+<title>Parking Service</title>
+<link rel="stylesheet" href="dashboard.css">
+<link rel="stylesheet" href="payments.css">
+</head>
+<body>
+
+<h2>Payments Activity</h2>
+
+<div class="service-container">
+    <div class="service-card">
+        <h2>Payment Activity</h2>
+
+        <table border="1" width="100%"></table>
+        <table class="payment-table">
+            <thead>
+                <tr>
+                    <th>Transaction ID</th>
+                    <th>Service</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="paymentTable"></tbody>
+        </table>
+    </div>
+</div>
+<script src="payments.js"></script>
+<script src="auth2.js"></script>
+</body>
+</html>
+
+

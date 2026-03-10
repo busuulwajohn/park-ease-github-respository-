@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Parking Service</title>
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<h2>Bookings Service</h2>
+<div class="service-container">
+    <div class="service-card">
+        <h2>Book Any Service</h2>
+
+        <form id="bookingForm">
+
+            <label>Select Service</label>
+            <select id="serviceType">
+                <option value="Parking">Parking</option>
+                <option value="Charging">Charging</option>
+                <option value="Car Wash">Car Wash</option>
+            </select>
+
+            <label>Duration (if applicable)</label>
+            <input type="number" id="bookingHours">
+
+            <label>Select Plan</label>
+            <select id="bookingPlan">
+                <option value="5">Standard (shs.10000)</option>
+                <option value="10">Premium (shs.20000)</option>
+                <option value="25">Full Service (shs.50000)</option>
+            </select>
+
+            <button type="submit">Complete Booking</button>
+        </form>
+
+        <div class="result-box" id="bookingResult"></div>
+    </div>
+</div>
+
+<!-- <script src="services.js"></script>
+<script src="auth2.js"></script> -->
+<script src="auth.js"></script>
+<script src="core.js"></script>
+<script src="services.js"></script>
+</body>
+</html>
